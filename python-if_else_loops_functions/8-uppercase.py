@@ -3,7 +3,7 @@ def uppercase(str):
     for i in str:
         if islower(i):
             i = chr(ord(i) - 32)
-        print(i, end='')
+        print("{0}".format(i), end='')
     print("")
 
 
