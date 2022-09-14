@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from re import L
 def square_matrix_simple(matrix=[]):
     new_matrix = []
     for row in matrix:
