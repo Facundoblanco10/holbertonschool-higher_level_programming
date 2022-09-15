@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-import string
-
-
 def roman_to_int(roman_string):
-    if roman_string is None or type(roman_string) is not string:
+    if roman_string is None or type(roman_string):
         return (0)
     res_int = 0
     a_dictionary = {'I': 1, 'V': 5, 'X': 10,
