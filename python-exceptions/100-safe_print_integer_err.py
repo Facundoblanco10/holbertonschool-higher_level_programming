@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+import logging
+
+
 def safe_print_integer_err(value):
     try:
         print("{:d}".format(value))
         return (True)
-    except Exception:
+    except Exception as e:
+        print(e)
         return (False)
