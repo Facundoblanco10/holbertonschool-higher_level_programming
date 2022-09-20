@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Empty module"""
+"""Module"""
 
 
 class Square():
