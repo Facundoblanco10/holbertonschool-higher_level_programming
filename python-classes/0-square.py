@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-"""Square class"""
+"""Module"""
 class Square():
+    """Square class"""
     pass
