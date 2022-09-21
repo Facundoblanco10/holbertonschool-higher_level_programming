@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Module"""
+
+
 def matrix_divided(matrix, div):
+    """Function"""
     if type(matrix) != list:
         raise TypeError("matrix must be a matrix (list of lists) "
                         "of integers/floats")

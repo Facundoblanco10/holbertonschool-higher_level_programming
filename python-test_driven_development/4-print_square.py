@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Module"""
+
+
 def print_square(size):
+    """Function"""
     if type(size) == float:
         size = int(size)
     if type(size) != int:

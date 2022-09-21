@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Module"""
+
+
 def text_indentation(text):
+    """Function"""
     if type(text) != str:
         raise TypeError("text must be a string")
     for ch in text:
