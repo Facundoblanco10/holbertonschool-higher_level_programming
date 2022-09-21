@@ -10,7 +10,7 @@ class testing(unittest.TestCase):
 
     def test_empty_list(self):
         actual = max_integer([])
-        self.assertEqual(actual, '')
+        self.assertEqual(actual, None)
 
     def test_max_integer_negative(self):
         actual = max_integer([-1, -4, -5, -10])
@@ -20,6 +20,3 @@ class testing(unittest.TestCase):
         actual = max_integer([5])
         self.assertEqual(actual, 5)
 
-    def test_list(self):
-        actual = max_integer(2)
-        self.assertEqual(actual, TypeError)
