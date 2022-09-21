@@ -20,3 +20,6 @@ class testing(unittest.TestCase):
         actual = max_integer([5])
         self.assertEqual(actual, 5)
 
+    def test_max_in_middle(self):
+        actual = max_integer([1, 2, 7, 1, 5])
+        self.assertEqual(actual, 7)
