@@ -4,7 +4,7 @@
 15
 
 >>> add_integer(4, -7)
-3
+-3
 
 >>> add_integer()
 Traceback (most recent call last):
@@ -29,5 +29,4 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 >>> add_integer(100.3, -2)
-Traceback (most recent call last):
-NameError: name 'add_integer' is not defined
+98
