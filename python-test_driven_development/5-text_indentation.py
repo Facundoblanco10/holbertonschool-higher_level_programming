@@ -16,4 +16,3 @@ def text_indentation(text):
         if ch == '.' or ch == '?' or ch == ':':
             print('\n')
             punctuation = True
-        
