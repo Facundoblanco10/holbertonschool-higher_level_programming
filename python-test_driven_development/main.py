@@ -1,18 +1,6 @@
 #!/usr/bin/python3
 """ Doc """
 
-matrix_divided = __import__('2-matrix_divided').matrix_divided
+text_indentation = __import__('5-text_indentation').text_indentation
 
-try:
-    matrix = [[3, "9"], [12, 3]]
-    print(matrix_divided(matrix, 2))
-    print(matrix)
-except Exception as e:
-    print(e)
-
-try:
-    matrix = [[3, 9], [12, 3]]
-    print(matrix_divided(matrix, "2"))
-    print(matrix)
-except Exception as e:
-    print(e)
+text_indentation("Holberton. School? How are you:    John")
