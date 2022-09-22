@@ -2,9 +2,6 @@
 """Module"""
 
 
-from re import X
-
-
 class Rectangle():
     """Class Rectangle"""
 
