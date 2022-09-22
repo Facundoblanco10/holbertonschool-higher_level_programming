@@ -2,9 +2,6 @@
 """Module"""
 
 
-from curses.textpad import rectangle
-
-
 class Rectangle():
     """Class Rectangle"""
 
