@@ -1,7 +1,16 @@
 #!/usr/bin/python3
-Square = __import__('6-square').Square
+SinglyLinkedList = __import__('100-singly_linked_list').SinglyLinkedList
 
-try:
-    my_square = Square(3, (1, "3"))
-except Exception as e:
-    print(e)
+sll = SinglyLinkedList()
+sll.sorted_insert(2)
+sll.sorted_insert(5)
+sll.sorted_insert(3)
+sll.sorted_insert(10)
+sll.sorted_insert(1)
+sll.sorted_insert(-4)
+sll.sorted_insert(-3)
+sll.sorted_insert(4)
+sll.sorted_insert(5)
+sll.sorted_insert(12)
+sll.sorted_insert(3)
+print(sll)
