@@ -46,7 +46,7 @@ class SinglyLinkedList():
             self.__head = new_node
             return
         aux = self.__head
-        while value > aux.data:
+        while value >= aux.data:
             prev = aux
             if aux.next_node:
                 aux = aux.next_node
@@ -59,7 +59,7 @@ class SinglyLinkedList():
     def __str__(self):
         st = ''
         if self.__head is None:
-            return
+            return (st)
         while self.__head.next_node:
             st += str(self.__head.data) + '\n'
             self.__head = self.__head.next_node
