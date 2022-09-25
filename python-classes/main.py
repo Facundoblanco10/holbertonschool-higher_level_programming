@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-SinglyLinkedList = __import__('100-singly_linked_list').SinglyLinkedList
+Square = __import__('101-square').Square
 
-sll = SinglyLinkedList()
-print(sll)
+my_square = Square(5, (0, 0))
+print(my_square)
+
+print("--")
+
+my_square = Square(5, (4, 1))
+print(my_square)
