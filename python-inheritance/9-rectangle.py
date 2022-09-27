@@ -21,5 +21,5 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         super().__init__()
-        st = f"[Rectangle]{self.__width}/{self.__height}"
+        st = f"[Rectangle] {self.__width}/{self.__height}"
         return (st)
