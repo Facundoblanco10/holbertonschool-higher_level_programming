@@ -21,13 +21,13 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 >>> bg.integer_validator("age", 1)
 
->>> bg.integer_valitador("age", 0)
+>>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
-NameError: name 'bg' is not defined
+ValueError: age must be greater than 0
 
->>> bg.integer_valitador("age", -4)
+>>> bg.integer_validator("age", -4)
 Traceback (most recent call last):
-NameError: name 'bg' is not defined
+ValueError: age must be greater than 0
 
 >>> bg.integer_validator("age", 4)
 
