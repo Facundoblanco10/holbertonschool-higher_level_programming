@@ -24,10 +24,5 @@ class Student():
         return m_dict
 
     def reload_from_json(self, json):
-        try:
-            for key in json:
-                self.first_name[key] = json[key]
-                self.last_name[key] = json [key]
-                self.age[key] = json[key]
-        except Exception:
-            Exception
+        for key in json:
+            setattr(self, key, json[key])
