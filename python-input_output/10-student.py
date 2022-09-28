@@ -12,7 +12,7 @@ class Student():
 
     def to_json(self, attrs=None):
         m_dict = {}
-        if attrs is None or len(attrs) == 0:
+        if attrs is None:
             return self.__dict__
         if type(attrs) == list:
             for at in attrs:
