@@ -7,5 +7,5 @@ import json
 
 def load_from_json_file(filename):
     """Function"""
-    with open(filename, "r") as f:
+    with open(filename, "x") as f:
         return json.load(f)
