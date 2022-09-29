@@ -3,11 +3,12 @@
 
 
 def pascal_triangle(n):
+    """Pascal triangle function"""
     p_list = []
     row = [1]
     if n <= 0:
         return p_list
-    
+
     for i in range(n):
         new_list = [1]
         for idx in range(i):
