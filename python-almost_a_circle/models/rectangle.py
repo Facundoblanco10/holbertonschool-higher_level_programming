@@ -56,6 +56,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    """Initializator"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -63,5 +64,6 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    """Area method"""
     def area(self):
         return (self.__width * self.__height)
