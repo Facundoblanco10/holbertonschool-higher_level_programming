@@ -86,6 +86,7 @@ class Rectangle(Base):
         return (st)
 
     def update(self, *args):
+        """Update the class"""
         for idx, ag in enumerate(args):
             if idx == 0:
                 self.id = args[0]
