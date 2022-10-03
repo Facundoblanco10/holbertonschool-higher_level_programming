@@ -84,3 +84,16 @@ class Rectangle(Base):
         st = f"[Rectangle] ({self.id}) {self.x}/{self.y} -"\
             f" {self.__width}/{self.__height}"
         return (st)
+
+    def update(self, *args):
+        for idx, ag in enumerate(args):
+            if idx == 0:
+                self.id = args[0]
+            elif idx == 1:
+                self.__width = args[1]
+            elif idx == 2:
+                self.__height = args[2]
+            elif idx == 3:
+                self.__x = args[3]
+            elif idx == 4:
+                self.__y = args[4]
