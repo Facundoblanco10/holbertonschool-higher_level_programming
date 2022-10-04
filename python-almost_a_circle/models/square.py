@@ -47,3 +47,12 @@ class Square(Rectangle):
                 self.x = args[2]
             elif idx == 3:
                 self.y = args[3]
+
+    def to_dictionary(self):
+        """Dictionary method"""
+        my_dict = {}
+        my_dict["x"] = self.x
+        my_dict["y"] = self.y
+        my_dict["id"] = self.id
+        my_dict["size"] = self.width
+        return my_dict
