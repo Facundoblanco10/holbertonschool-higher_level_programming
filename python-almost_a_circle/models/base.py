@@ -28,6 +28,9 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+        "Save a list of objects to a file in JSON format."
+        """
         new_list = []
         if list_objs is not None:
             for obj in list_objs:
@@ -37,6 +40,18 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
+        """
+        It takes a json string and returns a python object.
+        """
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Rectangle":
+            new_instance = cls(3, 3)
+        if cls.__name__ == "Square":
+            new_instance = cls(5)
+        new_instance.update(**dictionary)
+        return new_instance
