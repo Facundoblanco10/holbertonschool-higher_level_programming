@@ -85,8 +85,20 @@ class Rectangle(Base):
             f" {self.__width}/{self.__height}"
         return (st)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the class"""
+        if args is not None or len(args) == 0:
+            for key in kwargs:
+                if key == "id":
+                    self.id = kwargs[key]
+                elif key == "height":
+                    self.__height = kwargs[key]
+                elif key == "width":
+                    self.__width = kwargs[key]
+                elif key == "x":
+                    self.__x = kwargs[key]
+                elif key == "y":
+                    self.__y = kwargs[key]
         for idx, ag in enumerate(args):
             if idx == 0:
                 self.id = args[0]
