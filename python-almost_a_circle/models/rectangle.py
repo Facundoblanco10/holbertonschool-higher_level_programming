@@ -110,3 +110,13 @@ class Rectangle(Base):
                 self.__x = args[3]
             elif idx == 4:
                 self.__y = args[4]
+
+    def to_dictionary(self):
+        """Dictionary method"""
+        my_dict = {}
+        my_dict["x"] = self.__x
+        my_dict["y"] = self.__y
+        my_dict["id"] = self.id
+        my_dict["height"] = self.__height
+        my_dict["width"] = self.__width
+        return my_dict
