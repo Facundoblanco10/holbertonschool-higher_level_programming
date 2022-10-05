@@ -40,6 +40,11 @@ class testing(unittest.TestCase):
     def test_display(self):
         my_result = StringIO()
         sys.stdout = my_result
-        r = Rectangle(2, 2, 0, 0)
+        r = Rectangle(2, 2)
         r.display()
         self.assertEqual(my_result.getvalue(), "##\n##\n")
+    
+    def test_update(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.update()
+        self.assertEqual(r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
