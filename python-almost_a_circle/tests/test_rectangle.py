@@ -12,7 +12,12 @@ class testing(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 1, 2, "3")
         self.assertRaises(TypeError, Rectangle, 1, 2, 3, "4")
         self.assertRaises(ValueError, Rectangle, -1, 4)
-    
+        self.assertRaises(ValueError, Rectangle, 1, -2)
+        self.assertRaises(ValueError, Rectangle, 0, 4)
+        self.assertRaises(ValueError, Rectangle, 4, 0)
+        self.assertRaises(ValueError, Rectangle, 1, 4, -3)
+        self.assertRaises(ValueError, Rectangle, 1, 4, 2,-3)
+        
     def test_rectangle(self):
         r = Rectangle(3, 4)
         self.assertEqual(r.width, 3)
