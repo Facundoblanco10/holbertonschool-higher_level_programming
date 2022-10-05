@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Test Rectangle"""
 import unittest
+from io import StringIO
+import sys
 
 from models.rectangle import Rectangle
 
@@ -31,6 +33,15 @@ class testing(unittest.TestCase):
         self.assertEqual(r.area(), 2)
         self.assertEqual(r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
 
+    def test_to_dictionary(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r.to_dictionary(), {'x': 3, 'y': 4, 'id': 5, 'height': 2, 'width': 1})
+
     def test_display(self):
-        r = Rectangle(1, 2)
-        self.assertEqual(r.display(), None)
+        tmp = sys.stdout
+        my_result = StringIO()
+        sys.stdout = my_result
+        r = Rectangle(2, 2)
+        r.display()
+        sys.stdout = tmp
+        self.assertEqual(my_result.getvalue(), '##\n##\n')
