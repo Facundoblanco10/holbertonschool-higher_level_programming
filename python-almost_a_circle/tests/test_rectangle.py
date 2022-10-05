@@ -40,6 +40,6 @@ class testing(unittest.TestCase):
     def test_display(self):
         my_result = StringIO()
         sys.stdout = my_result
-        r = Rectangle(2, 2)
+        r = Rectangle(2, 2, 0, 0)
         r.display()
         self.assertEqual(my_result.getvalue(), "##\n##\n")
