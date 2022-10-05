@@ -38,10 +38,8 @@ class testing(unittest.TestCase):
         self.assertEqual(r.to_dictionary(), {'x': 3, 'y': 4, 'id': 5, 'height': 2, 'width': 1})
 
     def test_display(self):
-        tmp = sys.stdout
         my_result = StringIO()
         sys.stdout = my_result
         r = Rectangle(2, 2)
         r.display()
-        sys.stdout = tmp
         self.assertEqual(my_result.getvalue(), '##\n##\n')
