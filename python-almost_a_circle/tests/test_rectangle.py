@@ -48,3 +48,8 @@ class testing(unittest.TestCase):
         r = Rectangle(1, 2, 3, 4, 5)
         r.update()
         self.assertEqual(r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
+    
+    def test_create(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.create(**{ 'id': 89 })
+        self.assertEqual(r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
