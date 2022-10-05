@@ -29,3 +29,4 @@ class testing(unittest.TestCase):
         self.assertEqual(r.y, 4)
         self.assertEqual(r.id, 5)
         self.assertEqual(r.area(), 2)
+        self.assertEqual(r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
