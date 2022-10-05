@@ -30,3 +30,7 @@ class testing(unittest.TestCase):
         self.assertEqual(r.id, 5)
         self.assertEqual(r.area(), 2)
         self.assertEqual(r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
+
+    def test_display(self):
+        r = Rectangle(1, 2)
+        self.assertEqual(r.display(), None)
