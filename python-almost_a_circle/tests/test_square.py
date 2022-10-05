@@ -15,5 +15,8 @@ class testing(unittest.TestCase):
         self.assertEqual(s.id, 4)
         self.assertEqual(s.area(), 1)
         self.assertEqual(s.__str__(), '[Square] (4) 2/3 - 1')
+        s = Square(1, 2)
+        self.assertEqual(s.x, 2)
+        self.assertEqual(s.y, 0)
         
         
