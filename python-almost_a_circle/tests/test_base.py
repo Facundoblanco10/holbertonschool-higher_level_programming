@@ -25,3 +25,11 @@ class testing(unittest.TestCase):
     def test_list(self):
         b1 = Base([1, 2, 3])
         self.assertEqual(b1.id, [1, 2, 3])
+
+    def base_to_json_exists(self):
+        b1 = Base.to_json_string(None)
+        self.assertEqual(b1, '[]')
+
+    def base_to_json_exists2(self):
+        b1 = Base.to_json_string([])
+        self.assertEqual(b1, '[]')
