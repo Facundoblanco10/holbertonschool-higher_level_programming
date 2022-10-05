@@ -42,4 +42,4 @@ class testing(unittest.TestCase):
         sys.stdout = my_result
         r = Rectangle(2, 2)
         r.display()
-        self.assertEqual(my_result.getvalue(), '##\n##\n')
+        self.assertEqual(my_result.getvalue(), "##\n##\n")
