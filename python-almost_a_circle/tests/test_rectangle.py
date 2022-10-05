@@ -15,9 +15,3 @@ class testing(unittest.TestCase):
         self.assertEqual(str(r3), '[Rectangle] (3) 6/9 - 3/4')
         r4 = Rectangle(1, 4, 3, 3, 9)
         self.assertEqual(str(r4), '[Rectangle] (9) 3/3 - 1/4')
-    def test_rectangle_errors(self):
-        self.assertRaises(TypeError, Rectangle,"1", 4)
-        self.assertRaises(TypeError, Rectangle, 1, "4")
-        self.assertRaises(TypeError, Rectangle, 1, 2, "3")
-        self.assertRaises(TypeError, Rectangle, 1, 2, 3, "4")
-        self.assertRaises(ValueError, Rectangle, -1, 4)
