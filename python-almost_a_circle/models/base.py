@@ -2,7 +2,9 @@
 """Base module"""
 
 
+from fileinput import filename
 import json
+import os
 
 
 class Base():
@@ -55,3 +57,16 @@ class Base():
             new_instance = cls(5)
         new_instance.update(**dictionary)
         return new_instance
+
+    @classmethod
+    def load_from_file(cls):
+        new_list = []
+        filename = f"{cls.__name__}.json"
+        if not os.path.exists(filename):
+            return new_list
+        with open(filename, "r") as f:
+            f_cont = f.read()
+        instances = cls.from_json_string(f_cont)
+        for d in instances:
+            new_list.append(cls.create(**d))
+        return new_list
