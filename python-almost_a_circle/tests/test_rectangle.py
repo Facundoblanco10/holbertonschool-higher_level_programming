@@ -28,3 +28,4 @@ class testing(unittest.TestCase):
         self.assertEqual(r.x, 3)
         self.assertEqual(r.y, 4)
         self.assertEqual(r.id, 5)
+        self.assertEqual(r.area(), 2)
