@@ -48,12 +48,6 @@ class testing(unittest.TestCase):
         with open("Square.json", "r") as f:
             self.assertEqual(f.read(), '[]')
     
-    def test_save2(self):
-        Square.save_to_file([Square(2)])
-        with open("Square.json", "r") as f:
-            self.assertEqual('[{"x": 0, "y": 0, "id": 17, "size": 2}]',
-            f.read())
-    
     def test_save3(self):
         Square.save_to_file([])
         with open("Square.json", "r") as f:
@@ -62,4 +56,12 @@ class testing(unittest.TestCase):
     def test_load(self):
         Square.load_from_file()
         with open("Square.json", "r") as f:
-            self.assertEqual(f.read(), '[]')
+            self.assertEqual(f.read(), '[{"x": 0, "y": 0, "id": 29, "size": 2}]')
+
+class testing2(unittest.TestCase):
+    def test_save2(self):
+        Square.save_to_file([Square(2)])
+        with open("Square.json", "r") as f:
+            self.assertEqual('[{"x": 0, "y": 0, "id": 29, "size": 2}]',
+            f.read())
+    

@@ -71,7 +71,7 @@ class testing(unittest.TestCase):
     def test_load(self):
         Rectangle.load_from_file()
         with open("Rectangle.json") as f:
-            self.assertEqual(f.read(), '[]')
+            self.assertEqual(f.read(), '[{"x": 0, "y": 0, "id": 16, "height": 2, "width": 1}]')
 
     if __name__ == '__main__':
         unittest.main()
@@ -80,5 +80,5 @@ class testing2(unittest.TestCase):
     def test_save2(self):
         Rectangle.save_to_file([Rectangle(1, 2)])
         with open("Rectangle.json") as f:
-            self.assertEqual('[{"x": 0, "y": 0, "id": 15, "height": 2, "width": 1}]',
+            self.assertEqual('[{"x": 0, "y": 0, "id": 16, "height": 2, "width": 1}]',
             f.read())
