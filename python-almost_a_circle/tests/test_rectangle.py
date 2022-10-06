@@ -52,7 +52,16 @@ class testing(unittest.TestCase):
         r.update()
         self.assertEqual(r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
     
-
+    def test_create(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.create(**{ 'id': 89 })
+        self.assertEqual(r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
+    
+    def test_save2(self):
+        Rectangle.save_to_file([Rectangle(1, 2)])
+        with open("Rectangle.json") as f:
+            self.assertEqual('[{"x": 0, "y": 0, "id": 14, "height": 2, "width": 1}]',
+            f.read())
 
     if __name__ == '__main__':
         unittest.main()
