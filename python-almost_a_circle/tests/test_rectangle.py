@@ -57,4 +57,3 @@ class testing(unittest.TestCase):
     def test_save(self):
         r = Rectangle(1, 2, 3, 4, 5)
         r.save_to_file(None)
-        
