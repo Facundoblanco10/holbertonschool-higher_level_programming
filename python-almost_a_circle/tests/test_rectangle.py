@@ -62,3 +62,6 @@ class testing(unittest.TestCase):
         with open("Rectangle.json") as f:
             self.assertEqual('[{"x": 0, "y": 0, "id": 14, "height": 2, "width": 1}]',
             f.read())
+
+    if __name__ == '__main__':
+        unittest.main()
