@@ -27,3 +27,18 @@ class testing(unittest.TestCase):
         self.assertRaises(ValueError, Square, 1, -2)
         self.assertRaises(ValueError, Square, 0, 4)
         self.assertRaises(ValueError, Square, 0)
+        self.assertRaises(ValueError, Square, 1, 2, -3)
+
+    def test_to_dictionary(self):
+        s = Square(2, 3, 4, 5)
+        self.assertEqual(s.to_dictionary(), {'x': 3, 'y': 4, 'id': 5, 'size': 2})
+    
+    def test_update(self):
+        s = Square(2, 3, 4, 5)
+        s.update()
+        self.assertEqual(s.__str__(), '[Square] (5) 3/4 - 2')
+        
+    def test_create(self):
+        s = Square(2, 3, 4, 5)
+        s.create(**{ 'id': 89 })
+        self.assertEqual(s.__str__(), '[Square] (5) 3/4 - 2')
