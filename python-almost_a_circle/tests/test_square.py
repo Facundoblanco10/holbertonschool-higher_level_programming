@@ -18,5 +18,12 @@ class testing(unittest.TestCase):
         s = Square(1, 2)
         self.assertEqual(s.x, 2)
         self.assertEqual(s.y, 0)
-        
-        
+    
+    def test_square_errors(self):
+        self.assertRaises(TypeError, Square, "1")
+        self.assertRaises(TypeError, Square, 1, "4")
+        self.assertRaises(TypeError, Square, 1, 2, "3")
+        self.assertRaises(ValueError, Square, -1, 4)
+        self.assertRaises(ValueError, Square, 1, -2)
+        self.assertRaises(ValueError, Square, 0, 4)
+        self.assertRaises(ValueError, Square, 0)
