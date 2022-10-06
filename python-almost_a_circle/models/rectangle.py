@@ -112,7 +112,10 @@ class Rectangle(Base):
                 self.__y = args[4]
 
     def to_dictionary(self):
-        """Dictionary method"""
+        """
+        This function returns a dictionary representation of a Rectangle.
+        :return: A dictionary representation of a Rectangle
+        """
         my_dict = {}
         my_dict["x"] = self.__x
         my_dict["y"] = self.__y

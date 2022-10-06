@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """Test Rectangle"""
-import os
 import unittest
 from io import StringIO
 import sys
-import pathlib as pl
 
 from models.rectangle import Rectangle
 
 
 class testing(unittest.TestCase):
     def test_rectangle_errors(self):
+        """
+        The function test_rectangle_errors() tests the Rectangle class for errors
+        """
         self.assertRaises(TypeError, Rectangle,"1", 4)
         self.assertRaises(TypeError, Rectangle, 1, "4")
         self.assertRaises(TypeError, Rectangle, 1, 2, "3")
@@ -57,7 +58,7 @@ class testing(unittest.TestCase):
         self.assertEqual(r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
     
     def test_save(self):
-        r = Rectangle(1, 2, 3, 4, 5)
+        r = Rectangle(1, 2, 3)
         r.save_to_file(None)
-        path = os.getcwd() + "Rectangle.json"
-        self.assertEqual(path, os.getcwd() + "Rectangle.json")
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), '[]')
