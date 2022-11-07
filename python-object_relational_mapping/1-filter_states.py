@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     cur = cn.cursor()
     cur.execute('SELECT * FROM states WHERE states.name'
-                ' LIKE "N%" OR "n%" ORDER BY id ASC')
+                ' LIKE "[Nn]%" ORDER BY id ASC')
     rows = cur.fetchall()
     for row in rows:
         print(row)
