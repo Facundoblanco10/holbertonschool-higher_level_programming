@@ -13,7 +13,7 @@ if __name__ == '__main__':
                          db=sys.argv[3])
     cur = cn.cursor()
     cur.execute("SELECT id, name FROM states"
-                " WHERE states.name = '{}'".format(sys.argv[4]))
+                " WHERE states.name LIKE '{}'".format(sys.argv[4]))
     rows = cur.fetchall()
     for row in rows:
         print(row)
