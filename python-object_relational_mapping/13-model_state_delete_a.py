@@ -16,6 +16,6 @@ if __name__ == "__main__":
     session = Session()
     state = session.query(State).order_by(State.id).first()
     for state in session.query(State).order_by(State.id):
-        if state.name.find('a') == -1:
+        if state.name.find('a') != -1:
             session.delete(state)
             session.commit()
