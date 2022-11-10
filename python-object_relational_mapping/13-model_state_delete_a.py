@@ -14,9 +14,7 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).order_by(State.id).first()
     for state in session.query(State).order_by(State.id):
         if state.name.find('a') != -1:
             session.delete(state)
             session.commit()
-            continue
