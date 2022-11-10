@@ -19,4 +19,4 @@ if __name__ == "__main__":
         if state.name.find('a') != -1:
             session.delete(state)
             session.commit()
-    session.commit()
+            continue
