@@ -16,7 +16,7 @@ if __name__ == "__main__":
     session = Session()
     state = session.query(State).order_by(State.id).first()
     for state in session.query(State).order_by(State.id):
-        if state.name.find(f'{sys.argv[4]}') >= 0:
+        if state.name == sys.argv[4]:
             print("{}".format(state.id))
             exit()
     print("Not found")
