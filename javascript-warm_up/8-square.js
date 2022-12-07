@@ -4,6 +4,6 @@ const args = require('process');
 const size = parseInt(args.argv[2]);
 let i = 0;
 while (i < size) {
-  console.log('#'.repeat(size));
+  console.log('X'.repeat(size));
   i++;
 }
