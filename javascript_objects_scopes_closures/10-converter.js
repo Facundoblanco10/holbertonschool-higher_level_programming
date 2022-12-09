@@ -3,8 +3,7 @@
 exports.converter = function (base) {
   return (
     function (num) {
-      const result = parseInt(num, 10).toString(base);
-      return result;
+      return parseInt(num, 10).toString(base);;
     }
   );
 };
