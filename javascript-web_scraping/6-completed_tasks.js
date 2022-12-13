@@ -21,8 +21,7 @@ request.get(url, function (err, response, body) {
       }
     }
     for (const [key, value] of Object.entries(results)) {
-        if (value == 0)
-          delete results[key];
+      if (value === 0) delete results[key];
     }
     console.log(results);
   }
