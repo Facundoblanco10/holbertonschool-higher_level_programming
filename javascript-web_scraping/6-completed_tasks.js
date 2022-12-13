@@ -20,6 +20,10 @@ request.get(url, function (err, response, body) {
         results[userId] += 1;
       }
     }
+    for (const [key, value] of Object.entries(results)) {
+        if (value == 0)
+          delete results[key];
+    }
     console.log(results);
   }
 });
