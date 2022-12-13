@@ -4,7 +4,7 @@ const request = require('request');
 
 const url = process.argv[2];
 
-counter = 0
+let counter = 0;
 request.get(url, function (err, response, body) {
   if (err) {
     console.error(err);
@@ -12,10 +12,10 @@ request.get(url, function (err, response, body) {
     const data = JSON.parse(body);
     for (const episode of data.results) {
       for (const character of episode.characters) {
-        let route = character.split("/");
-        charId = route.slice(-2)[0];
-        if (charId == 18) {
-            counter += 1;
+        const route = character.split('/');
+        const charId = route.slice(-2)[0];
+        if (charId === '18') {
+          counter += 1;
         }
       }
     }
