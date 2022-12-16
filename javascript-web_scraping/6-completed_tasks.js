@@ -14,8 +14,9 @@ request.get(url, function (err, response, body) {
     for (let i = 0; i < data.length; i++) {
       if (!userId || userId !== data[i].userId) {
         userId = data[i].userId;
-        if (!results[userId])
+        if (!results[userId]) {
           results[userId] = 0;
+        }
       }
       if (data[i].completed) {
         results[userId] += 1;
